@@ -1,20 +1,27 @@
-=== {eac}SoftwareRegistry Custom Hooks ===
-Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/
-Author:             [EarthAsylum Consulting](https://www.earthasylum.com)
-Stable tag:         2.0.10
-Last Updated:       15-Feb-2024
-Requires at least:  5.5.0
-Tested up to:       6.4
-Requires PHP:       7.2
-Contributors:       kevinburkholder
-License:            GPLv3 or later
-License URI:        https://www.gnu.org/licenses/gpl.html
-Tags:               software registration, software registry, software license, license manager, registration hooks, {eac}SoftwareRegistry
-GitHub URI: 		https://github.com/EarthAsylum/eacsoftwareregistry-custom-hooks
+# {eac}SoftwareRegistry Custom Hooks  
+[![EarthAsylum Consulting](https://img.shields.io/badge/EarthAsylum-Consulting-0?&labelColor=6e9882&color=707070)](https://earthasylum.com/)
+[![WordPress](https://img.shields.io/badge/WordPress-Plugins-grey?logo=wordpress&labelColor=blue)](https://wordpress.org/plugins/search/EarthAsylum/)
+[![eacDoojigger](https://img.shields.io/badge/Requires-{eac}Doojigger-da821d)](https://eacDoojigger.earthasylum.com/)
 
-{eac}SoftwareRegistry custom hooks - Add PHP code for the many hooks (filters and actions) available in the Software Registration Server.
+<details><summary>Plugin Header</summary><samp>
 
-== Description ==
+Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/  
+Author:             [EarthAsylum Consulting](https://www.earthasylum.com)  
+Stable tag:         2.0.10  
+Last Updated:       15-Feb-2024  
+Requires at least:  5.5.0  
+Tested up to:       6.4  
+Requires PHP:       7.2  
+Contributors:       [kevinburkholder](https://profiles.wordpress.org/kevinburkholder)  
+License:            GPLv3 or later  
+License URI:        https://www.gnu.org/licenses/gpl.html  
+Tags:               software registration, software registry, software license, license manager, registration hooks, {eac}SoftwareRegistry  
+GitHub URI: 		https://github.com/EarthAsylum/eacsoftwareregistry-custom-hooks  
+</samp></details>
+
+**_{eac}SoftwareRegistry custom hooks - Add PHP code for the many hooks (filters and actions) available in the Software Registration Server._**
+
+## Description
 
 **{eac}SoftwareRegistry Custom Hooks** is an extension plugin to [{eac}SoftwareRegistry Software Registration Server](https://swregistry.earthasylum.com/software-registration-server/).
 
@@ -27,7 +34,7 @@ Although this extension includes some pre-built customizations, the main purpose
 >   This custom hooks extension is a developer-level extension which uses *your* PHP code. To add customizations beyond what is provided requires PHP programming knowledge and basic understanding of WordPress actions and filters.
 
 
-= Implementing Custom Hooks =
+#### Implementing Custom Hooks
 
 To implement your customizations:
 
@@ -71,7 +78,7 @@ For example, if you wanted to customize the assignment of a new registration key
 >   In some cases, default code is provided as both example and preference. If not needed, defaults should be removed or disabled.
 
 
-= WordPress Administration =
+#### WordPress Administration
 
 From the administrator settings screen (found at *Software Registry » Settings » Hooks*), you may enable or disable each hook independently or as a group (by each extension).
 
@@ -82,7 +89,7 @@ For example, after modifying the `new_registry_key()` method (above), you must g
 
 ![{eac}SoftwareRegistry New Registration](https://d2xk802d4616wu.cloudfront.net/eacsoftwareregistry-custom-hooks/assets/screenshot-6.png)
 
-= List of Available Hooks =
+#### List of Available Hooks
 
 Administrator settings `eacSoftwareRegistry/Customhooks/custom_hooks_admin_options.extension.php`
 
@@ -128,7 +135,7 @@ New registration `eacSoftwareRegistry/Customhooks/custom_hooks_new_registration.
     'eacSoftwareRegistry_new_registry_key'
 
 
-= Custom Hook Method Arguments =
+#### Custom Hook Method Arguments
 
     $newRegistrationKey     // The key value (uuid) assigned to a new registration
 
@@ -169,32 +176,32 @@ New registration `eacSoftwareRegistry/Customhooks/custom_hooks_new_registration.
     $postValues             // Array of values passed to wp_insert_post(), including 'meta_input' array with above registry values
 
 
-== Installation ==
+## Installation
 
 **{eac}SoftwareRegistry Custom Hooks** is an extension plugin to and requires installation and registration of [{eac}SoftwareRegistry](https://swregistry.earthasylum.com/).
 
-= Automatic Plugin Installation =
+#### Automatic Plugin Installation
 
 Due to the nature of this plugin, it is NOT available from the WordPress Plugin Repository and can not be installed from the WordPress Dashboard » *Plugins* » *Add New* » *Search* feature.
 
-= Upload via WordPress Dashboard =
+#### Upload via WordPress Dashboard
 
 Installation of this plugin can be managed from the WordPress Dashboard » *Plugins* » *Add New* page. Click the [Upload Plugin] button, then select the eacsoftwareregistry-custom-hooks.zip file from your computer.
 
 See [Managing Plugins -> Upload via WordPress Admin](https://wordpress.org/support/article/managing-plugins/#upload-via-wordpress-admin)
 
-= Manual Plugin Installation =
+#### Manual Plugin Installation
 
 You can install the plugin manually by extracting the eacsoftwareregistry-custom-hooks.zip file and uploading the 'eacsoftwareregistry-custom-hooks' folder to the 'wp-content/plugins' folder on your WordPress server.
 
 See [Managing Plugins -> Manual Plugin Installation](https://wordpress.org/support/article/managing-plugins/#manual-plugin-installation-1)
 
-= Settings =
+#### Settings
 
 Options for this extension will be added to the *Software Registry » Settings » Hooks* tab.
 
 
-== Screenshots ==
+## Screenshots
 
 
 1. {eac}SoftwareRegistry Custom Hooks
@@ -216,105 +223,16 @@ Options for this extension will be added to the *Software Registry » Settings �
 ![{eac}SoftwareRegistry New Registration](https://d2xk802d4616wu.cloudfront.net/eacsoftwareregistry-custom-hooks/assets/screenshot-6.png)
 
 
-== Other Notes ==
+## Other Notes
 
-= See Also =
+#### See Also
 
 +   [{eac}SoftwareRegistry – Software Registration Server](https://swregistry.earthasylum.com/software-registration-server/)
 
 +   [Implementing the Software Registry SDK](https://swregistry.earthasylum.com/software-registry-sdk/)
 
-= Consulting =
+#### Consulting
 
 If you are unable to perform the customizations as outlined, yet need your Software Registration Server customized, we are more than happy to discuss and provide a quote to do these customizations for you. You may contact us at [support@earthasylum.com](mailto:support@earthasylum.com)
 
-
-== Copyright ==
-
-= Copyright © 2019-2024, EarthAsylum Consulting, distributed under the terms of the GNU GPL. =
-
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should receive a copy of the GNU General Public License along with this program. If not, see [https://www.gnu.org/licenses/](https://www.gnu.org/licenses/).
-
-
-== Changelog ==
-
-= Version 2.0.10 – February 15, 2024 =
-
-+	Update for Github hosting.
-
-= Version 2.0.9 – May 1, 2023 =
-
-+	Renamed classes.
-+	Allow 'license_count' to pass in html table.
-
-= Version 2.0.8 – April 17, 2023 =
-
-+	Added 'refresh' api request.
-+	Tested with {eac}SoftwareRegistry v1.3, {eac}Doojigger v2.3, and WordPress 6.2.
-
-= Version 2.0.7 – April 12, 2023 =
-
-+	Removed custom code from client_messages.
-
-= Version 2.0.6 – April 7, 2023 =
-
-+	Updated custom_hooks_client_messages.extension for {eac}SoftwaReregistry Software Taxonomy.
-
-= Version 2.0.5 – November 15, 2022 =
-
-+	Updated for {eac}SoftwareRegistry v1.2 and {eac}Doojigger v2.0.
-+	Uses 'options_settings_page' action to register options.
-+	Moved plugin_action_links_ hook to eacSoftwareRegistry_load_extensions filter.
-+	Improved plugin loader and updater.
-
-= Version 2.0.4 – September 24, 2022 =
-
-+	Fixed potential PHP notice on load (plugin_action_links_).
-+	Fixed registry status and license array.
-+	Added settings_refresh_intervals filter.
-
-= Version 2.0.3 – September 9, 2022 =
-
-+	Added support for new 'registry_title' value.
-+   Added upgrade notice trait for plugins page.
-
-= Version 2.0.2 – August 30, 2022 =
-
-+	Added auto-update with plugin_update trait.
-
-= Version 2.0.1 – August 24, 2022 =
-
-+	Updated to / Requires {eac}Doojigger 1.2
-+	Added 'Settings' and 'Docs' links on plugins page.
-
-= Version 2.0.0 – July 29, 2022 =
-
-+   Fundamental change for security. No longer supports online code editing, instead provides functionality and framework for customizations stored in a (child) theme sub-folder.
-
-= Version 1.0.2 – July 15, 2022 =
-
-+   Cosmetic changes for WordPress submission.
-+   Updated default hooks.
-
-= Version 1.0.1 – June 18, 2022 =
-
-+   Fix update_registration_post conflict.
-+   Updated hooks/filters.
-
-= Version 1.0.0 – May 4, 2022 =
-
-+   Initial public release.
-
-
-== Upgrade Notice ==
-
-Updating this plugin will overwrite all code in the `eacsoftwareregistry-custom-hooks` plugin directory. Your customizations should be placed in your (child) theme folder.
-
-= 2.0.6 =
-
-This version requires {eac}SoftwareRegistry v1.3+
 
