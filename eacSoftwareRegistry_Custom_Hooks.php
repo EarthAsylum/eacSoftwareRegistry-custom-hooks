@@ -17,7 +17,7 @@
  * Tested up to:		6.4
  * Requires PHP:		7.2
  * Plugin URI:			https://swregistry.earthasylum.com/software-registry-hooks/
- * Update URI: 			https://d2xk802d4616wu.cloudfront.net/eacsoftwareregistry-custom-hooks/wp_updater.php
+ * Update URI: 			https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks.json
  * Author:				EarthAsylum Consulting
  * Author URI:			http://www.earthasylum.com
  * License:				GPLv3 or later
