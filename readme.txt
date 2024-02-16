@@ -10,7 +10,7 @@ Contributors:       kevinburkholder
 License:            GPLv3 or later
 License URI:        https://www.gnu.org/licenses/gpl.html
 Tags:               software registration, software registry, software license, license manager, registration hooks, {eac}SoftwareRegistry
-GitHub URI: 		https://github.com/EarthAsylum/eacsoftwareregistry-custom-hooks
+GitHub URI: 		https://github.com/EarthAsylum/eacSoftwaReregistry-custom-hooks
 
 {eac}SoftwareRegistry custom hooks - Add PHP code for the many hooks (filters and actions) available in the Software Registration Server.
 
@@ -80,7 +80,7 @@ From the administrator settings screen (found at *Software Registry » Settings 
 
 For example, after modifying the `new_registry_key()` method (above), you must go to the settings screen, enable the *New Registration Hooks* extension and then enable the *New Registration Key* hook.
 
-![{eac}SoftwareRegistry New Registration](https://d2xk802d4616wu.cloudfront.net/eacsoftwareregistry-custom-hooks/assets/screenshot-6.png)
+![{eac}SoftwareRegistry New Registration](https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks/assets/screenshot-6.png)
 
 = List of Available Hooks =
 
@@ -198,22 +198,22 @@ Options for this extension will be added to the *Software Registry » Settings �
 
 
 1. {eac}SoftwareRegistry Custom Hooks
-![{eac}SoftwareRegistry Administrator](https://d2xk802d4616wu.cloudfront.net/eacsoftwareregistry-custom-hooks/assets/screenshot-1.png)
+![{eac}SoftwareRegistry Administrator](https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks/assets/screenshot-1.png)
 
 2. {eac}SoftwareRegistry Administrator Hooks
-![{eac}SoftwareRegistry Administrator](https://d2xk802d4616wu.cloudfront.net/eacsoftwareregistry-custom-hooks/assets/screenshot-2.png)
+![{eac}SoftwareRegistry Administrator](https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks/assets/screenshot-2.png)
 
 3. {eac}SoftwareRegistry API Request Hooks
-![{eac}SoftwareRegistry API Request](https://d2xk802d4616wu.cloudfront.net/eacsoftwareregistry-custom-hooks/assets/screenshot-3.png)
+![{eac}SoftwareRegistry API Request](https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks/assets/screenshot-3.png)
 
 4. {eac}SoftwareRegistry API Response Hooks
-![{eac}SoftwareRegistry API Response](https://d2xk802d4616wu.cloudfront.net/eacsoftwareregistry-custom-hooks/assets/screenshot-4.png)
+![{eac}SoftwareRegistry API Response](https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks/assets/screenshot-4.png)
 
 5. {eac}SoftwareRegistry Client Hooks
-![{eac}SoftwareRegistry Client](https://d2xk802d4616wu.cloudfront.net/eacsoftwareregistry-custom-hooks/assets/screenshot-5.png)
+![{eac}SoftwareRegistry Client](https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks/assets/screenshot-5.png)
 
 6. {eac}SoftwareRegistry New Registration Hooks
-![{eac}SoftwareRegistry New Registration](https://d2xk802d4616wu.cloudfront.net/eacsoftwareregistry-custom-hooks/assets/screenshot-6.png)
+![{eac}SoftwareRegistry New Registration](https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks/assets/screenshot-6.png)
 
 
 == Other Notes ==
