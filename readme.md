@@ -1,9 +1,9 @@
-# {eac}SoftwareRegistry Custom Hooks  
+## {eac}SoftwareRegistry Custom Hooks  
 [![EarthAsylum Consulting](https://img.shields.io/badge/EarthAsylum-Consulting-0?&labelColor=6e9882&color=707070)](https://earthasylum.com/)
 [![WordPress](https://img.shields.io/badge/WordPress-Plugins-grey?logo=wordpress&labelColor=blue)](https://wordpress.org/plugins/search/EarthAsylum/)
-[![eacDoojigger](https://img.shields.io/badge/Requires-{eac}Doojigger-da821d)](https://eacDoojigger.earthasylum.com/)
+[![eacDoojigger](https://img.shields.io/badge/Requires-%7Beac%7DDoojigger-da821d)](https://eacDoojigger.earthasylum.com/)
 
-<details><summary>Plugin Header</summary><samp>
+<details><summary>Plugin Header</summary>
 
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/  
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)  
@@ -17,11 +17,12 @@ License:            GPLv3 or later
 License URI:        https://www.gnu.org/licenses/gpl.html  
 Tags:               software registration, software registry, software license, license manager, registration hooks, {eac}SoftwareRegistry  
 GitHub URI: 		https://github.com/EarthAsylum/eacSoftwaReregistry-custom-hooks  
-</samp></details>
 
-**_{eac}SoftwareRegistry custom hooks - Add PHP code for the many hooks (filters and actions) available in the Software Registration Server._**
+</details>
 
-## Description
+> {eac}SoftwareRegistry custom hooks - Add PHP code for the many hooks (filters and actions) available in the Software Registration Server.
+
+### Description
 
 **{eac}SoftwareRegistry Custom Hooks** is an extension plugin to [{eac}SoftwareRegistry Software Registration Server](https://swregistry.earthasylum.com/software-registration-server/).
 
@@ -176,7 +177,7 @@ New registration `eacSoftwareRegistry/Customhooks/custom_hooks_new_registration.
     $postValues             // Array of values passed to wp_insert_post(), including 'meta_input' array with above registry values
 
 
-## Installation
+### Installation
 
 **{eac}SoftwareRegistry Custom Hooks** is an extension plugin to and requires installation and registration of [{eac}SoftwareRegistry](https://swregistry.earthasylum.com/).
 
@@ -201,7 +202,7 @@ See [Managing Plugins -> Manual Plugin Installation](https://wordpress.org/suppo
 Options for this extension will be added to the *Software Registry » Settings » Hooks* tab.
 
 
-## Screenshots
+### Screenshots
 
 
 1. {eac}SoftwareRegistry Custom Hooks
@@ -223,7 +224,7 @@ Options for this extension will be added to the *Software Registry » Settings �
 ![{eac}SoftwareRegistry New Registration](https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks/assets/screenshot-6.png)
 
 
-## Other Notes
+### Other Notes
 
 #### See Also
 
