@@ -10,7 +10,7 @@ Contributors:       kevinburkholder
 License:            GPLv3 or later
 License URI:        https://www.gnu.org/licenses/gpl.html
 Tags:               software registration, software registry, software license, license manager, registration hooks, {eac}SoftwareRegistry
-GitHub URI: 		https://github.com/EarthAsylum/eacSoftwaReregistry-custom-hooks
+GitHub URI:         https://github.com/EarthAsylum/eacSoftwaReregistry-custom-hooks
 
 {eac}SoftwareRegistry custom hooks - Add PHP code for the many hooks (filters and actions) available in the Software Registration Server.
 
@@ -75,8 +75,8 @@ For example, if you wanted to customize the assignment of a new registration key
 
 From the administrator settings screen (found at *Software Registry » Settings » Hooks*), you may enable or disable each hook independently or as a group (by each extension).
 
-+	Each extension is disabled by default and must be enabled from the settings screen.
-+	For each filter that is customized, the individual hook must be enabled from the settings screen.
++   Each extension is disabled by default and must be enabled from the settings screen.
++   For each filter that is customized, the individual hook must be enabled from the settings screen.
 
 For example, after modifying the `new_registry_key()` method (above), you must go to the settings screen, enable the *New Registration Hooks* extension and then enable the *New Registration Key* hook.
 
@@ -99,7 +99,7 @@ Administrator settings `eacSoftwareRegistry/Customhooks/custom_hooks_admin_optio
 
 API Requests `eacSoftwareRegistry/Customhooks/custom_hooks_api_request.extension.php`
 
-    'eacSoftwareRegistry_api_request_parameters'		// pre-coded to log the api request parameters
+    'eacSoftwareRegistry_api_request_parameters'        // pre-coded to log the api request parameters
     'eacSoftwareRegistry_api_create_registration'
     'eacSoftwareRegistry_api_activate_registration'
     'eacSoftwareRegistry_api_revise_registration'
@@ -108,7 +108,7 @@ API Requests `eacSoftwareRegistry/Customhooks/custom_hooks_api_request.extension
 
 API Responses `eacSoftwareRegistry/Customhooks/custom_hooks_api_response.extension.php`
 
-    'eacSoftwareRegistry_api_registration_values'		// pre-coded to log the api response values
+    'eacSoftwareRegistry_api_registration_values'       // pre-coded to log the api response values
     'eacSoftwareRegistry_validate_registration'
     'eacSoftwareRegistry_is_valid_registration'
     'eacSoftwareRegistry_update_registration_post'
@@ -117,7 +117,7 @@ Client Message Hooks `eacSoftwareRegistry/Customhooks/custom_hooks_client_messag
 
     'eacSoftwareRegistry_api_registration_notices'
     'eacSoftwareRegistry_api_registration_message'
-    'eacSoftwareRegistry_client_registry_translate'		// pre-coded to remove certain values passed to the client
+    'eacSoftwareRegistry_client_registry_translate'     // pre-coded to remove certain values passed to the client
     'eacSoftwareRegistry_client_registry_html'
     'eacSoftwareRegistry_client_email_headers'
     'eacSoftwareRegistry_client_email_style'
@@ -244,52 +244,52 @@ You should receive a copy of the GNU General Public License along with this prog
 
 = Version 2.0.10 – February 15, 2024 =
 
-+	Update for Github hosting.
++   Update for Github hosting.
 
 = Version 2.0.9 – May 1, 2023 =
 
-+	Renamed classes.
-+	Allow 'license_count' to pass in html table.
++   Renamed classes.
++   Allow 'license_count' to pass in html table.
 
 = Version 2.0.8 – April 17, 2023 =
 
-+	Added 'refresh' api request.
-+	Tested with {eac}SoftwareRegistry v1.3, {eac}Doojigger v2.3, and WordPress 6.2.
++   Added 'refresh' api request.
++   Tested with {eac}SoftwareRegistry v1.3, {eac}Doojigger v2.3, and WordPress 6.2.
 
 = Version 2.0.7 – April 12, 2023 =
 
-+	Removed custom code from client_messages.
++   Removed custom code from client_messages.
 
 = Version 2.0.6 – April 7, 2023 =
 
-+	Updated custom_hooks_client_messages.extension for {eac}SoftwaReregistry Software Taxonomy.
++   Updated custom_hooks_client_messages.extension for {eac}SoftwaReregistry Software Taxonomy.
 
 = Version 2.0.5 – November 15, 2022 =
 
-+	Updated for {eac}SoftwareRegistry v1.2 and {eac}Doojigger v2.0.
-+	Uses 'options_settings_page' action to register options.
-+	Moved plugin_action_links_ hook to eacSoftwareRegistry_load_extensions filter.
-+	Improved plugin loader and updater.
++   Updated for {eac}SoftwareRegistry v1.2 and {eac}Doojigger v2.0.
++   Uses 'options_settings_page' action to register options.
++   Moved plugin_action_links_ hook to eacSoftwareRegistry_load_extensions filter.
++   Improved plugin loader and updater.
 
 = Version 2.0.4 – September 24, 2022 =
 
-+	Fixed potential PHP notice on load (plugin_action_links_).
-+	Fixed registry status and license array.
-+	Added settings_refresh_intervals filter.
++   Fixed potential PHP notice on load (plugin_action_links_).
++   Fixed registry status and license array.
++   Added settings_refresh_intervals filter.
 
 = Version 2.0.3 – September 9, 2022 =
 
-+	Added support for new 'registry_title' value.
++   Added support for new 'registry_title' value.
 +   Added upgrade notice trait for plugins page.
 
 = Version 2.0.2 – August 30, 2022 =
 
-+	Added auto-update with plugin_update trait.
++   Added auto-update with plugin_update trait.
 
 = Version 2.0.1 – August 24, 2022 =
 
-+	Updated to / Requires {eac}Doojigger 1.2
-+	Added 'Settings' and 'Docs' links on plugins page.
++   Updated to / Requires {eac}Doojigger 1.2
++   Added 'Settings' and 'Docs' links on plugins page.
 
 = Version 2.0.0 – July 29, 2022 =
 

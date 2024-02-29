@@ -16,7 +16,7 @@ Contributors:       [kevinburkholder](https://profiles.wordpress.org/kevinburkho
 License:            GPLv3 or later  
 License URI:        https://www.gnu.org/licenses/gpl.html  
 Tags:               software registration, software registry, software license, license manager, registration hooks, {eac}SoftwareRegistry  
-GitHub URI: 		https://github.com/EarthAsylum/eacSoftwaReregistry-custom-hooks  
+GitHub URI:         https://github.com/EarthAsylum/eacSoftwaReregistry-custom-hooks  
 
 </details>
 
@@ -83,8 +83,8 @@ For example, if you wanted to customize the assignment of a new registration key
 
 From the administrator settings screen (found at *Software Registry » Settings » Hooks*), you may enable or disable each hook independently or as a group (by each extension).
 
-+	Each extension is disabled by default and must be enabled from the settings screen.
-+	For each filter that is customized, the individual hook must be enabled from the settings screen.
++   Each extension is disabled by default and must be enabled from the settings screen.
++   For each filter that is customized, the individual hook must be enabled from the settings screen.
 
 For example, after modifying the `new_registry_key()` method (above), you must go to the settings screen, enable the *New Registration Hooks* extension and then enable the *New Registration Key* hook.
 
@@ -107,7 +107,7 @@ Administrator settings `eacSoftwareRegistry/Customhooks/custom_hooks_admin_optio
 
 API Requests `eacSoftwareRegistry/Customhooks/custom_hooks_api_request.extension.php`
 
-    'eacSoftwareRegistry_api_request_parameters'		// pre-coded to log the api request parameters
+    'eacSoftwareRegistry_api_request_parameters'        // pre-coded to log the api request parameters
     'eacSoftwareRegistry_api_create_registration'
     'eacSoftwareRegistry_api_activate_registration'
     'eacSoftwareRegistry_api_revise_registration'
@@ -116,7 +116,7 @@ API Requests `eacSoftwareRegistry/Customhooks/custom_hooks_api_request.extension
 
 API Responses `eacSoftwareRegistry/Customhooks/custom_hooks_api_response.extension.php`
 
-    'eacSoftwareRegistry_api_registration_values'		// pre-coded to log the api response values
+    'eacSoftwareRegistry_api_registration_values'       // pre-coded to log the api response values
     'eacSoftwareRegistry_validate_registration'
     'eacSoftwareRegistry_is_valid_registration'
     'eacSoftwareRegistry_update_registration_post'
@@ -125,7 +125,7 @@ Client Message Hooks `eacSoftwareRegistry/Customhooks/custom_hooks_client_messag
 
     'eacSoftwareRegistry_api_registration_notices'
     'eacSoftwareRegistry_api_registration_message'
-    'eacSoftwareRegistry_client_registry_translate'		// pre-coded to remove certain values passed to the client
+    'eacSoftwareRegistry_client_registry_translate'     // pre-coded to remove certain values passed to the client
     'eacSoftwareRegistry_client_registry_html'
     'eacSoftwareRegistry_client_email_headers'
     'eacSoftwareRegistry_client_email_style'
