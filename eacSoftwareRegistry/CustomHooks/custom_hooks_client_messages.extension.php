@@ -23,7 +23,7 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 	/**
 	 * @var string extension version
 	 */
-	const VERSION	= '23.0501.1';
+	const VERSION	= '24.0415.1';
 
 
 	/**
@@ -96,6 +96,13 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 													'label'		=> 	"Notification Email Message",
 													'info'		=> 	"The email message used for client email notifications.",
 												),
+				'tag_client_email_footer' 	=> array(
+													'type'		=>	'checkbox',
+													'title'		=> 	$this->plugin->prefixHookName('client_email_footer'),
+													'options'	=>	['Enabled'],
+													'label'		=> 	"Notification Email Footer",
+													'info'		=> 	"The email footer used for client email notifications.",
+												),
 			]
 		);
 	}
@@ -128,6 +135,9 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 
 		if ($this->is_option('tag_client_email_message'))
 			$this->add_filter('client_email_message',		array($this, 'client_email_message'), 20, 3);
+
+		if ($this->is_option('tag_client_email_footer'))
+			$this->add_filter('client_email_footer',		array($this, 'client_email_footer'), 20, 3);
 	}
 
 
@@ -263,6 +273,25 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 	 * @return string
 	 */
 	public function client_email_message(string $message, array $registration, object $wpPost): string
+	{
+		global $wp, $wpdb;
+
+		try {
+			/* custom code here */
+			return $message;
+		} catch (\Throwable $e) {$this->plugin->logError($e);return $message;}
+	}
+
+
+	/**
+	 * client_email_footer handler
+	 *
+	 * @param string $message Default html for client email
+	 * @param array $registration The registration data array with registry values
+	 * @param object $wpPost WP_Post object
+	 * @return string
+	 */
+	public function client_email_footer(string $message, array $registration, object $wpPost): string
 	{
 		global $wp, $wpdb;
 

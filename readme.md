@@ -7,10 +7,10 @@
 
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/  
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)  
-Stable tag:         2.0.10  
-Last Updated:       15-Feb-2024  
+Stable tag:         2.0.11  
+Last Updated:       15-Apr-2024  
 Requires at least:  5.5.0  
-Tested up to:       6.4  
+Tested up to:       6.5  
 Requires PHP:       7.2  
 Contributors:       [kevinburkholder](https://profiles.wordpress.org/kevinburkholder)  
 License:            GPLv3 or later  
@@ -111,7 +111,9 @@ API Requests `eacSoftwareRegistry/Customhooks/custom_hooks_api_request.extension
     'eacSoftwareRegistry_api_create_registration'
     'eacSoftwareRegistry_api_activate_registration'
     'eacSoftwareRegistry_api_revise_registration'
+    'eacSoftwareRegistry_api_renew_registration'
     'eacSoftwareRegistry_api_deactivate_registration'
+    'eacSoftwareRegistry_api_refresh_registration'
     'eacSoftwareRegistry_api_verify_registration'
 
 API Responses `eacSoftwareRegistry/Customhooks/custom_hooks_api_response.extension.php`
@@ -130,6 +132,7 @@ Client Message Hooks `eacSoftwareRegistry/Customhooks/custom_hooks_client_messag
     'eacSoftwareRegistry_client_email_headers'
     'eacSoftwareRegistry_client_email_style'
     'eacSoftwareRegistry_client_email_message'
+    'eacSoftwareRegistry_client_email_footer'
 
 New registration `eacSoftwareRegistry/Customhooks/custom_hooks_new_registration.extension.php`
 

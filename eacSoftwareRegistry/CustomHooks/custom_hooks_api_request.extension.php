@@ -23,7 +23,7 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 	/**
 	 * @var string extension version
 	 */
-	const VERSION	= '23.0501.1';
+	const VERSION	= '24.0415.1';
 
 
 	/**
@@ -70,6 +70,13 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 													'options'	=>	['Enabled'],
 													'label'		=> "API Revise Parameters",
 													'info'		=> "When revising a registration, filter the registry parameter array.",
+												),
+				'tag_api_renew_registration' => array(
+													'type'		=>	'checkbox',
+													'title'		=> 	$this->plugin->prefixHookName('api_renew_registration'),
+													'options'	=>	['Enabled'],
+													'label'		=> "API Renew Parameters",
+													'info'		=> "When renewing a registration, filter the registry parameter array.",
 												),
 				'tag_api_deactivate_registration' 	=> array(
 													'type'		=>	'checkbox',
@@ -122,6 +129,9 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 
 		if ($this->is_option('tag_api_revise_registration'))
 			$this->add_filter('api_revise_registration',	array($this, 'api_revise_registration'), 20, 2);
+
+		if ($this->is_option('tag_api_renew_registration'))
+			$this->add_filter('api_renew_registration',		array($this, 'api_renew_registration'), 20, 2);
 
 		if ($this->is_option('tag_api_deactivate_registration'))
 			$this->add_filter('api_deactivate_registration',array($this, 'api_deactivate_registration'), 20, 2);
@@ -200,6 +210,24 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 	 * @return array | WP_Error
 	 */
 	public function api_revise_registration(array $requestParams, object $wpPost)
+	{
+		global $wp, $wpdb;
+
+		try {
+			/* custom code here */
+			return $requestParams;
+		} catch (\Throwable $e) {$this->plugin->logError($e);return $requestParams;}
+	}
+
+
+	/**
+	 * api_renew_registration handler
+	 *
+	 * @param array	$requestParams The parameter array passed through the API.
+	 * @param object $wpPost WP_Post object
+	 * @return array | WP_Error
+	 */
+	public function api_renew_registration(array $requestParams, object $wpPost)
 	{
 		global $wp, $wpdb;
 
