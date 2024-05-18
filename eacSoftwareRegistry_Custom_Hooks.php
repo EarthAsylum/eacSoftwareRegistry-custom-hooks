@@ -12,7 +12,7 @@
  * @wordpress-plugin
  * Plugin Name:			{eac}SoftwareRegistry Custom Hooks
  * Description:			Software Registration Server Custom Hooks - allows coding hooks and customization of the Software Registration Server
- * Version:				2.0.10
+ * Version:				2.0.11
  * Requires at least:	5.5.0
  * Tested up to:		6.5
  * Requires PHP:		7.2
