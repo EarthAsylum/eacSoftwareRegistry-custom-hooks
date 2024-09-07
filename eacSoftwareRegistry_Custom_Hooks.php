@@ -13,9 +13,9 @@
  * Plugin Name:			{eac}SoftwareRegistry Custom Hooks
  * Description:			Software Registration Server Custom Hooks - allows coding hooks and customization of the Software Registration Server
  * Version:				2.0.11
- * Requires at least:	5.5.0
- * Tested up to:		6.5
- * Requires PHP:		7.2
+ * Requires at least:	5.8
+ * Tested up to:		6.6
+ * Requires PHP:		7.4
  * Plugin URI:			https://swregistry.earthasylum.com/software-registry-hooks/
  * Update URI: 			https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks.json
  * Author:				EarthAsylum Consulting
