@@ -5,16 +5,15 @@
  * @category	WordPress Plugin
  * @package		{eac}SoftwareRegistry Custom Hooks
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2023 EarthAsylum Consulting <www.earthasylum.com>
- * @version		2.x
+ * @copyright	Copyright (c) 2024 EarthAsylum Consulting <www.earthasylum.com>
  * @uses		{eac}SoftwareRegistry
  *
  * @wordpress-plugin
  * Plugin Name:			{eac}SoftwareRegistry Custom Hooks
  * Description:			Software Registration Server Custom Hooks - allows coding hooks and customization of the Software Registration Server
- * Version:				2.0.11
+ * Version:				2.0.12
  * Requires at least:	5.8
- * Tested up to:		6.6
+ * Tested up to:		6.7
  * Requires PHP:		7.4
  * Plugin URI:			https://swregistry.earthasylum.com/software-registry-hooks/
  * Update URI: 			https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks.json

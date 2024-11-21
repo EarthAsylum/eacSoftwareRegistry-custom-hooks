@@ -7,12 +7,12 @@
 
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/  
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)  
-Stable tag:         2.0.11  
-Last Updated:       15-Apr-2024  
+Stable tag:         2.0.12  
+Last Updated:       20-Nov-2024  
 Requires at least:  5.8  
-Tested up to:       6.6  
+Tested up to:       6.7  
 Requires PHP:       7.4  
-Contributors:       [kevinburkholder](https://profiles.wordpress.org/kevinburkholder)  
+Contributors:       [earthasylum](https://github.com/earthasylum),[kevinburkholder](https://profiles.wordpress.org/kevinburkholder)  
 License:            GPLv3 or later  
 License URI:        https://www.gnu.org/licenses/gpl.html  
 Tags:               software registration, software registry, software license, license manager, registration hooks, {eac}SoftwareRegistry  
@@ -127,6 +127,7 @@ Client Message Hooks `eacSoftwareRegistry/Customhooks/custom_hooks_client_messag
 
     'eacSoftwareRegistry_api_registration_notices'
     'eacSoftwareRegistry_api_registration_message'
+    'eacSoftwareRegistry_api_registration_supplemental'
     'eacSoftwareRegistry_client_registry_translate'     // pre-coded to remove certain values passed to the client
     'eacSoftwareRegistry_client_registry_html'
     'eacSoftwareRegistry_client_email_headers'

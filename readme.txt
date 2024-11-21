@@ -1,12 +1,12 @@
 === {eac}SoftwareRegistry Custom Hooks ===
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)
-Stable tag:         2.0.11
-Last Updated:       15-Apr-2024
+Stable tag:         2.0.12
+Last Updated:       20-Nov-2024
 Requires at least:  5.8
-Tested up to:       6.6
+Tested up to:       6.7
 Requires PHP:       7.4
-Contributors:       kevinburkholder
+Contributors:       earthasylum@github,kevinburkholder@wordpress
 License:            GPLv3 or later
 License URI:        https://www.gnu.org/licenses/gpl.html
 Tags:               software registration, software registry, software license, license manager, registration hooks, {eac}SoftwareRegistry
@@ -119,6 +119,7 @@ Client Message Hooks `eacSoftwareRegistry/Customhooks/custom_hooks_client_messag
 
     'eacSoftwareRegistry_api_registration_notices'
     'eacSoftwareRegistry_api_registration_message'
+    'eacSoftwareRegistry_api_registration_supplemental'
     'eacSoftwareRegistry_client_registry_translate'     // pre-coded to remove certain values passed to the client
     'eacSoftwareRegistry_client_registry_html'
     'eacSoftwareRegistry_client_email_headers'
@@ -245,10 +246,15 @@ You should receive a copy of the GNU General Public License along with this prog
 
 == Changelog ==
 
+= Version 2.0.12 – November 20, 2024 =
+
++   New `eacSoftwareRegistry_api_registration_supplemental` filter.
++   Compatible with WordPress 6.7.
+
 = Version 2.0.11 – April 15, 2024 =
 
 +   Added new/missing filters
-    +   'eacSoftwareRegistryclient_email_footer'
+    +   'eacSoftwareRegistry_client_email_footer'
     +   'eacSoftwareRegistry_api_renew_registration'
 +   Compatible with WordPress 6.5.
 

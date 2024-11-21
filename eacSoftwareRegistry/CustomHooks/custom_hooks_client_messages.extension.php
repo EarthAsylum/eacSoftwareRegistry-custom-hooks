@@ -9,8 +9,7 @@ namespace EarthAsylumConsulting\Extensions;
  * @category	WordPress Plugin
  * @package		{eac}SoftwareRegistry
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2023 EarthAsylum Consulting <www.earthasylum.com>
- * @version		2.x
+ * @copyright	Copyright (c) 2024 EarthAsylum Consulting <www.earthasylum.com>
  * @see 		eacSoftwareRegistry_custom_hooks.extension.php
  */
 
@@ -23,7 +22,7 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 	/**
 	 * @var string extension version
 	 */
-	const VERSION	= '24.0415.1';
+	const VERSION	= '24.1120.1';
 
 
 	/**
@@ -46,7 +45,6 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 													'type'		=>	'checkbox',
 													'title'		=> 	$this->plugin->prefixHookName('registration_notices'),
 													'options'	=>	['Enabled'],
-													'default'	=> 'Enabled',
 													'label'		=> "Notice(s) returned with registration",
 													'info'		=> "To set the notice(s) returned to the client with the registration values."
 												),
@@ -54,9 +52,15 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 													'type'		=>	'checkbox',
 													'title'		=> 	$this->plugin->prefixHookName('registration_message'),
 													'options'	=>	['Enabled'],
-													'default'	=> 'Enabled',
 													'label'		=> "Message returned with registration",
 													'info'		=> "To set an html message returned to the client with the registration values."
+												),
+				'tag_registration_supplemental' => array(
+													'type'		=>	'checkbox',
+													'title'		=> 	$this->plugin->prefixHookName('registration_supplemental'),
+													'options'	=>	['Enabled'],
+													'label'		=> "Supplemental html/data returned with registration",
+													'info'		=> "To set additional html or data returned to the client with the registration values."
 												),
 				'tag_client_registry_translate' => array(
 													'type'		=>	'checkbox',
@@ -116,28 +120,31 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 	public function addActionsAndFilters()
 	{
 		if ($this->is_option('tag_registration_notices'))
-			$this->add_filter('api_registration_notices',	array($this, 'registration_notices'), 20, 4);
+			$this->add_filter('api_registration_notices',		array($this, 'registration_notices'), 20, 4);
 
 		if ($this->is_option('tag_registration_message'))
-			$this->add_filter('api_registration_message',	array($this, 'registration_message'), 20, 4);
+			$this->add_filter('api_registration_message',		array($this, 'registration_message'), 20, 4);
+
+		if ($this->is_option('tag_registration_supplemental'))
+			$this->add_filter('api_registration_supplemental',	array($this, 'registration_supplemental'), 20, 4);
 
 		if ($this->is_option('tag_client_registry_translate'))
-			$this->add_filter('client_registry_translate',	array($this, 'client_registry_translate'), 20, 2);
+			$this->add_filter('client_registry_translate',		array($this, 'client_registry_translate'), 20, 2);
 
 		if ($this->is_option('tag_client_registry_html'))
-			$this->add_filter('client_registry_html',		array($this, 'client_registry_html'), 20, 3);
+			$this->add_filter('client_registry_html',			array($this, 'client_registry_html'), 20, 3);
 
 		if ($this->is_option('tag_client_email_headers'))
-			$this->add_filter('client_email_headers',		array($this, 'client_email_headers'), 20, 3);
+			$this->add_filter('client_email_headers',			array($this, 'client_email_headers'), 20, 3);
 
 		if ($this->is_option('tag_client_email_style'))
-			$this->add_filter('client_email_style',			array($this, 'client_email_style'), 20, 3);
+			$this->add_filter('client_email_style',				array($this, 'client_email_style'), 20, 3);
 
 		if ($this->is_option('tag_client_email_message'))
-			$this->add_filter('client_email_message',		array($this, 'client_email_message'), 20, 3);
+			$this->add_filter('client_email_message',			array($this, 'client_email_message'), 20, 3);
 
 		if ($this->is_option('tag_client_email_footer'))
-			$this->add_filter('client_email_footer',		array($this, 'client_email_footer'), 20, 3);
+			$this->add_filter('client_email_footer',			array($this, 'client_email_footer'), 20, 3);
 	}
 
 
@@ -168,7 +175,7 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 	 * @param array $registration The registration data array with registry values
 	 * @param object $wpPost WP_Post object
 	 * @param string $apiAction One of 'create', 'activate', 'revise', 'deactivate', 'verify' or 'update' (non-api)
-	 * @return array
+	 * @return string
 	 */
 	public function registration_message(string $message, array $registration, object $wpPost, string $apiAction): string
 	{
@@ -178,6 +185,26 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 			/* custom code here */
 			return $message;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $message;}
+	}
+
+
+	/**
+	 * registration_supplemental handler
+	 *
+	 * @param mixed $supplemental HTML string passed to client
+	 * @param array $registration The registration data array with registry values
+	 * @param object $wpPost WP_Post object
+	 * @param string $apiAction One of 'create', 'activate', 'revise', 'deactivate', 'verify' or 'update' (non-api)
+	 * @return mixed
+	 */
+	public function registration_supplemental($supplemental, array $registration, object $wpPost, string $apiAction)
+	{
+		global $wp, $wpdb;
+
+		try {
+			/* custom code here */
+			return $supplemental;
+		} catch (\Throwable $e) {$this->plugin->logError($e);return $supplemental;}
 	}
 
 
