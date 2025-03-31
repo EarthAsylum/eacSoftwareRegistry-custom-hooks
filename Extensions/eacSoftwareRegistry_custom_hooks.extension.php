@@ -7,10 +7,11 @@ namespace EarthAsylumConsulting\Extensions;
  * Extension to allow custom code for eacSoftwareRegistry filters
  *
  * @category	WordPress Plugin
- * @package		{eac}SoftwareRegistry
+ * @package		{eac}SoftwareRegistry\Custom Hooks
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2023 EarthAsylum Consulting <www.earthasylum.com>
+ * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.earthasylum.com>
  * @version		2.x
+ * @link		https://swregistry.earthasylum.com/
  */
 
 /*
@@ -55,7 +56,12 @@ class eacSoftwareRegistry_custom_hooks extends \EarthAsylumConsulting\abstract_e
 	/**
 	 * @var string extension version
 	 */
-	const VERSION	= '22.1115.1';
+	const VERSION		= '25.0331.1';
+
+	/**
+	 * @var string to set default tab name
+	 */
+	const TAB_NAME		= 'Hooks';
 
 
 	/**
@@ -71,7 +77,7 @@ class eacSoftwareRegistry_custom_hooks extends \EarthAsylumConsulting\abstract_e
 
 		if ($this->is_admin())
 		{
-			$this->registerExtension( ['registry_hooks' , 'Hooks'] );
+			$this->registerExtension( 'registry_hooks' );
 			// Register plugin options when needed
 			$this->add_action( "options_settings_page", array($this, 'admin_options_settings') );
 			// Add contextual help

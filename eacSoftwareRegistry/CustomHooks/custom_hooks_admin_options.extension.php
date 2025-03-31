@@ -7,11 +7,11 @@ namespace EarthAsylumConsulting\Extensions;
  * Extension to allow custom code for eacSoftwareRegistry filters
  *
  * @category	WordPress Plugin
- * @package		{eac}SoftwareRegistry
+ * @package		{eac}SoftwareRegistry\Custom Hooks
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2023 EarthAsylum Consulting <www.earthasylum.com>
+ * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.earthasylum.com>
  * @version		2.x
- * @see 		eacSoftwareRegistry_custom_hooks.extension.php
+ * @link		https://swregistry.earthasylum.com/
  */
 
 /*
@@ -23,7 +23,12 @@ class custom_hooks_admin_options extends \EarthAsylumConsulting\abstract_extensi
 	/**
 	 * @var string extension version
 	 */
-	const VERSION	= '23.0501.1';
+	const VERSION		= '25.0331.1';
+
+	/**
+	 * @var string to set default tab name
+	 */
+	const TAB_NAME		= 'Hooks';
 
 
 	/**
@@ -36,11 +41,51 @@ class custom_hooks_admin_options extends \EarthAsylumConsulting\abstract_extensi
 	{
 		parent::__construct($plugin, self::ALLOW_ALL|self::DEFAULT_DISABLED);
 
+		if ($this->is_admin())
+		{
+			$this->registerExtension( 'administrator_hooks' );
+			// Register plugin options when needed
+			$this->add_action( "options_settings_page", array($this, 'admin_options_settings') );
+
+			// we need these early (on the settings page)
+			if ($this->plugin->isSettingsPage())
+			{
+				if ($this->is_option('tag_settings_timezones'))
+					$this->add_filter('settings_timezones',			array($this, 'settings_timezones'), 20, 1);
+
+				if ($this->is_option('tag_settings_status_codes'))
+					$this->add_filter('settings_status_codes',		array($this, 'settings_status_codes'), 20, 1);
+
+				if ($this->is_option('tag_settings_post_status'))
+					$this->add_filter('settings_post_status',		array($this, 'settings_post_status'), 20, 1);
+
+				if ($this->is_option('tag_settings_initial_terms'))
+					$this->add_filter('settings_initial_terms',		array($this, 'settings_initial_terms'), 20, 1);
+
+				if ($this->is_option('tag_settings_full_terms'))
+					$this->add_filter('settings_full_terms',		array($this, 'settings_full_terms'), 20, 1);
+
+				if ($this->is_option('tag_settings_refresh_intervals'))
+					$this->add_filter('settings_refresh_intervals',	array($this, 'settings_refresh_intervals'), 20, 1);
+
+				if ($this->is_option('tag_settings_license_levels'))
+					$this->add_filter('settings_license_levels',	array($this, 'settings_license_levels'), 20, 1);
+			}
+		}
+	}
+
+
+	/**
+	 * register options on options_settings_page
+	 *
+	 */
+	public function admin_options_settings()
+	{
 		/*
 		 * Register this extension with [group name, tab name] and settings array
 		 * Options here allow enabling/disabling each filter independently
 		 */
-		$this->registerExtension( ['administrator_hooks' , 'Hooks' ],
+		$this->registerExtensionOptions( 'administrator_hooks',
 			[
 				'tag_settings_timezones' 		=> array(
 													'type'		=>	'checkbox',
@@ -121,31 +166,6 @@ class custom_hooks_admin_options extends \EarthAsylumConsulting\abstract_extensi
 												),
 			]
 		);
-
-		// we need these early (on the settings page)
-		if ($this->plugin->isSettingsPage())
-		{
-			if ($this->is_option('tag_settings_timezones'))
-				$this->add_filter('settings_timezones',			array($this, 'settings_timezones'), 20, 1);
-
-			if ($this->is_option('tag_settings_status_codes'))
-				$this->add_filter('settings_status_codes',		array($this, 'settings_status_codes'), 20, 1);
-
-			if ($this->is_option('tag_settings_post_status'))
-				$this->add_filter('settings_post_status',		array($this, 'settings_post_status'), 20, 1);
-
-			if ($this->is_option('tag_settings_initial_terms'))
-				$this->add_filter('settings_initial_terms',		array($this, 'settings_initial_terms'), 20, 1);
-
-			if ($this->is_option('tag_settings_full_terms'))
-				$this->add_filter('settings_full_terms',		array($this, 'settings_full_terms'), 20, 1);
-
-			if ($this->is_option('tag_settings_refresh_intervals'))
-				$this->add_filter('settings_refresh_intervals',	array($this, 'settings_refresh_intervals'), 20, 1);
-
-			if ($this->is_option('tag_settings_license_levels'))
-				$this->add_filter('settings_license_levels',	array($this, 'settings_license_levels'), 20, 1);
-		}
 	}
 
 

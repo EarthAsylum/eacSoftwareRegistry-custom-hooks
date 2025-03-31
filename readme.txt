@@ -1,10 +1,10 @@
 === {eac}SoftwareRegistry Custom Hooks ===
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)
-Stable tag:         2.0.12
-Last Updated:       20-Nov-2024
+Stable tag:         2.0.13
+Last Updated:       31-Mar-2025
 Requires at least:  5.8
-Tested up to:       6.7
+Tested up to:       6.8
 Requires PHP:       7.4
 Contributors:       earthasylum@github,kevinburkholder@wordpress
 License:            GPLv3 or later
@@ -245,6 +245,13 @@ You should receive a copy of the GNU General Public License along with this prog
 
 
 == Changelog ==
+
+= Version 2.0.13 – March 31, 2025 =
+
++   Compatible with WordPress 6.8.
++   Extensions now use `options_settings_page` action to load admin screen options.
+    + Prevents '_load_textdomain_just_in_time' notices from WordPress.
+    + Custom versions should follow suite.
 
 = Version 2.0.12 – November 20, 2024 =
 

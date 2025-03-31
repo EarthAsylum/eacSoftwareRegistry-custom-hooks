@@ -7,10 +7,11 @@ namespace EarthAsylumConsulting\Extensions;
  * Extension to allow custom code for eacSoftwareRegistry filters
  *
  * @category	WordPress Plugin
- * @package		{eac}SoftwareRegistry
+ * @package		{eac}SoftwareRegistry\Custom Hooks
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2024 EarthAsylum Consulting <www.earthasylum.com>
- * @see 		eacSoftwareRegistry_custom_hooks.extension.php
+ * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.earthasylum.com>
+ * @version		2.x
+ * @link		https://swregistry.earthasylum.com/
  */
 
 /*
@@ -22,7 +23,12 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 	/**
 	 * @var string extension version
 	 */
-	const VERSION	= '24.1120.1';
+	const VERSION		= '25.0331.1';
+
+	/**
+	 * @var string to set default tab name
+	 */
+	const TAB_NAME		= 'Hooks';
 
 
 	/**
@@ -35,11 +41,26 @@ class custom_hooks_client_messages extends \EarthAsylumConsulting\abstract_exten
 	{
 		parent::__construct($plugin, self::ALLOW_ALL|self::DEFAULT_DISABLED);
 
+		if ($this->is_admin())
+		{
+			$this->registerExtension( 'client_message_hooks' );
+			// Register plugin options when needed
+			$this->add_action( "options_settings_page", array($this, 'admin_options_settings') );
+		}
+	}
+
+
+	/**
+	 * register options on options_settings_page
+	 *
+	 */
+	public function admin_options_settings()
+	{
 		/*
 		 * Register this extension with [group name, tab name] and settings array
 		 * Options here allow enabling/disabling each filter independently
 		 */
-		$this->registerExtension( ['client_message_hooks' , 'Hooks' ],
+		$this->registerExtensionOptions( 'client_message_hooks',
 			[
 				'tag_registration_notices' 		=> array(
 													'type'		=>	'checkbox',

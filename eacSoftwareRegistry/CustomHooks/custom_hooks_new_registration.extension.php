@@ -7,11 +7,11 @@ namespace EarthAsylumConsulting\Extensions;
  * Extension to allow custom code for eacSoftwareRegistry filters
  *
  * @category	WordPress Plugin
- * @package		{eac}SoftwareRegistry
+ * @package		{eac}SoftwareRegistry\Custom Hooks
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2023 EarthAsylum Consulting <www.earthasylum.com>
+ * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.earthasylum.com>
  * @version		2.x
- * @see 		eacSoftwareRegistry_custom_hooks.extension.php
+ * @link		https://swregistry.earthasylum.com/
  */
 
 /*
@@ -23,7 +23,12 @@ class custom_hooks_new_registration extends \EarthAsylumConsulting\abstract_exte
 	/**
 	 * @var string extension version
 	 */
-	const VERSION	= '23.0501.1';
+	const VERSION		= '25.0331.1';
+
+	/**
+	 * @var string to set default tab name
+	 */
+	const TAB_NAME		= 'Hooks';
 
 
 	/**
@@ -36,11 +41,26 @@ class custom_hooks_new_registration extends \EarthAsylumConsulting\abstract_exte
 	{
 		parent::__construct($plugin, self::ALLOW_ALL|self::DEFAULT_DISABLED);
 
+		if ($this->is_admin())
+		{
+			$this->registerExtension( 'new_registration_hooks' );
+			// Register plugin options when needed
+			$this->add_action( "options_settings_page", array($this, 'admin_options_settings') );
+		}
+	}
+
+
+	/**
+	 * register options on options_settings_page
+	 *
+	 */
+	public function admin_options_settings()
+	{
 		/*
 		 * Register this extension with [group name, tab name] and settings array
 		 * Options here allow enabling/disabling each filter independently
 		 */
-		$this->registerExtension( ['new_registration_hooks' , 'Hooks' ],
+		$this->registerExtensionOptions( 'new_registration_hooks',
 			[
 				'tag_new_registry_key' 			=> array(
 													'type'		=>	'checkbox',
