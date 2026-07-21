@@ -1,17 +1,18 @@
-## {eac}SoftwareRegistry Custom Hooks  
+## {eac}SoftwareRegistry Custom Hooks
 [![EarthAsylum Consulting](https://img.shields.io/badge/EarthAsylum-Consulting-0?&labelColor=6e9882&color=707070)](https://earthasylum.com/)
 [![WordPress](https://img.shields.io/badge/WordPress-Plugins-grey?logo=wordpress&labelColor=blue)](https://wordpress.org/plugins/search/EarthAsylum/)
 [![eacDoojigger](https://img.shields.io/badge/Requires-%7Beac%7DDoojigger-da821d)](https://eacDoojigger.earthasylum.com/)
+[![Sponsorship](https://img.shields.io/static/v1?label=Sponsorship&message=%E2%9D%A4&logo=GitHub&color=bf3889)](https://github.com/sponsors/EarthAsylum)
 
 <details><summary>Plugin Header</summary>
 
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/  
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)  
-Stable tag:         2.0.13  
-Last Updated:       31-Mar-2025  
+Stable tag:         2.0.14  
+Last Updated:       20-Jul-2026  
 Requires at least:  5.8  
-Tested up to:       6.8  
-Requires PHP:       7.4  
+Tested up to:       7.0  
+Requires PHP:       8.1  
 Contributors:       [earthasylum](https://github.com/earthasylum),[kevinburkholder](https://profiles.wordpress.org/kevinburkholder)  
 Donate link:        https://github.com/sponsors/EarthAsylum  
 License:            GPLv3 or later  
@@ -240,5 +241,16 @@ Options for this extension will be added to the *Software Registry » Settings �
 #### Consulting
 
 If you are unable to perform the customizations as outlined, yet need your Software Registration Server customized, we are more than happy to discuss and provide a quote to do these customizations for you. You may contact us at [support@earthasylum.com](mailto:support@earthasylum.com)
+
+
+### Copyright
+
+#### Copyright © 2019-2026, EarthAsylum Consulting, distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.  
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should receive a copy of the GNU General Public License along with this program. If not, see [https://www.gnu.org/licenses/](https://www.gnu.org/licenses/).
 
 

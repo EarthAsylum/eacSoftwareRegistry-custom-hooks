@@ -1,11 +1,11 @@
 === {eac}SoftwareRegistry Custom Hooks ===
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)
-Stable tag:         2.0.13
-Last Updated:       31-Mar-2025
+Stable tag:         2.0.14
+Last Updated:       20-Jul-2026
 Requires at least:  5.8
-Tested up to:       6.8
-Requires PHP:       7.4
+Tested up to:       7.0
+Requires PHP:       8.1
 Contributors:       earthasylum@github,kevinburkholder@wordpress
 Donate link:        https://github.com/sponsors/EarthAsylum
 License:            GPLv3 or later
@@ -236,7 +236,7 @@ If you are unable to perform the customizations as outlined, yet need your Softw
 
 == Copyright ==
 
-= Copyright © 2019-2024, EarthAsylum Consulting, distributed under the terms of the GNU GPL. =
+= Copyright © 2019-2026, EarthAsylum Consulting, distributed under the terms of the GNU GPL. =
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -246,6 +246,10 @@ You should receive a copy of the GNU General Public License along with this prog
 
 
 == Changelog ==
+
+= Version 2.0.14 – July 20, 2026 =
+
++   Compatible with WordPress 7.0.
 
 = Version 2.0.13 – March 31, 2025 =
 
