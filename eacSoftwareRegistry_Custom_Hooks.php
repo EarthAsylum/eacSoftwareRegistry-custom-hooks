@@ -15,7 +15,7 @@
  * Description:			Software Registration Server Custom Hooks - allows coding hooks and customization of the Software Registration Server
  * Version:				2.0.14
  * Requires at least:	5.8
- * Tested up to:		7.0
+ * Tested up to:		7.1
  * Requires PHP:		8.1
  * Plugin URI:			https://swregistry.earthasylum.com/software-registry-hooks/
  * Update URI: 			https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks.json
