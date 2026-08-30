@@ -7,14 +7,16 @@
 <details><summary>Plugin Header</summary>
 
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/  
-Author:             [EarthAsylum Consulting](https://www.earthasylum.com)  
-Stable tag:         2.0.14  
-Last Updated:       20-Jul-2026  
+Stable tag:         2.0.15  
+Last Updated:       30-Aug-2026  
 Requires at least:  5.8  
 Tested up to:       7.1  
 Requires PHP:       8.1  
-Contributors:       [earthasylum](https://github.com/earthasylum),[kevinburkholder](https://profiles.wordpress.org/kevinburkholder)  
+Author:				EarthAsylum Consulting  
+Author URI:			http://www.earthasylum.com  
+Contributors:       [EarthAsylum](https://github.com/EarthAsylum),[KevinBurkholder](https://profiles.wordpress.org/KevinBurkholder)  
 Donate link:        https://github.com/sponsors/EarthAsylum  
+Support link:		https://github.com/EarthAsylum/eacSoftwaReregistry-custom-hooks/issues  
 License:            GPLv3 or later  
 License URI:        https://www.gnu.org/licenses/gpl.html  
 Tags:               software registration, software registry, software license, license manager, registration hooks, {eac}SoftwareRegistry  

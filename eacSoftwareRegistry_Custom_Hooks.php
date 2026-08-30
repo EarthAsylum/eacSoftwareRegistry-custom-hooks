@@ -9,11 +9,13 @@
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
  * @copyright	Copyright (c) 2026 EarthAsylum Consulting <www.earthasylum.com>
  * @link		https://swregistry.earthasylum.com/
+ * @link 		https://swregistry.earthasylum.com/software-registry-hooks/
+ * @link 		https://github.com/EarthAsylum/eacSoftwaReregistry-custom-hooks
  *
  * @wordpress-plugin
  * Plugin Name:			{eac}SoftwareRegistry Custom Hooks
  * Description:			Software Registration Server Custom Hooks - allows coding hooks and customization of the Software Registration Server
- * Version:				2.0.14
+ * Version:				2.0.15
  * Requires at least:	5.8
  * Tested up to:		7.1
  * Requires PHP:		8.1
@@ -34,6 +36,20 @@
 
 namespace EarthAsylumConsulting;
 
+if (!class_exists('\\EarthAsylumConsulting\\eacSoftwareRegistry',false))
+{
+	\add_action( 'admin_notices', function()
+		{
+			echo '<div class="notice notice-error is-dismissible">'.
+				 '<em>{eac}SoftwareRegistry Custom Hooks</em> '.
+				 'requires installation & activation of '.
+				 '<a href="https://swregistry.earthasylum.com/software-registration-server/" target="_blank">'.
+				 '{eac}SoftwareRegistry</a>.</div>';
+		}
+	);
+	return;
+}
+
 class eacSoftwareRegistry_Custom_Hooks
 {
 	/**
@@ -52,25 +68,29 @@ class eacSoftwareRegistry_Custom_Hooks
 
 		add_filter( 'eacSoftwareRegistry_load_extensions',	function($extensionDirectories)
 			{
-				/*
-    			 * Enable update notice (self hosted or wp hosted)
-    			 */
-				eacSoftwareRegistry::loadPluginUpdater(__FILE__,'self');
+				if (is_admin())
+				{
+					/*
+					 * Enable update notice (self hosted or wp hosted)
+					 */
+					eacSoftwareRegistry::loadPluginUpdater(__FILE__,'self');
 
-				/*
-    			 * on plugin_action_links_ filter, add 'Settings' link
-    			 */
-				add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ),function($pluginLinks, $pluginFile, $pluginData)
-					{
-						return array_merge(
-							[
-								'settings'		=> eacSoftwareRegistry::getSettingsLink($pluginData,'hooks'),
-								'documentation'	=> eacSoftwareRegistry::getDocumentationLink($pluginData),
-							],
-							$pluginLinks
-						);
-					},20,3
-				);
+					/*
+					 * on plugin_action_links_ filter, add 'Settings' link
+					 */
+					add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ),function($pluginLinks, $pluginFile, $pluginData)
+						{
+							return array_merge(
+								[
+									'settings'		=> eacSoftwareRegistry::getSettingsLink($pluginData,'hooks'),
+									'documentation'	=> eacSoftwareRegistry::getDocumentationLink($pluginData),
+									'support'		=> eacSoftwareRegistry::getSupportLink($pluginData),
+								],
+								$pluginLinks
+							);
+						},20,3
+					);
+				}
 
 				/*
     			 * Add our extension to load (look in theme folder)
