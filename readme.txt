@@ -5,7 +5,7 @@ Last Updated:       30-Aug-2026
 Requires at least:  5.8
 Tested up to:       7.1
 Requires PHP:       8.1
-Author Name:		EarthAsylum Consulting
+Author:				EarthAsylum Consulting
 Author URI:			http://www.earthasylum.com
 Contributors:       EarthAsylum@github,KevinBurkholder@wordpress
 Donate link:        https://github.com/sponsors/EarthAsylum

@@ -21,7 +21,7 @@
  * Requires PHP:		8.1
  * Plugin URI:			https://swregistry.earthasylum.com/software-registry-hooks/
  * Update URI: 			https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks.json
- * Author Name:			EarthAsylum Consulting
+ * Author:				EarthAsylum Consulting
  * Author URI:			http://www.earthasylum.com
  * License:				GPLv3 or later
  * License URI:			https://www.gnu.org/licenses/gpl.html
