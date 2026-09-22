@@ -36,19 +36,17 @@
 
 namespace EarthAsylumConsulting;
 
-if (!class_exists('\\EarthAsylumConsulting\\eacSoftwareRegistry',false))
+if (! class_exists( 'EarthAsylumConsulting\eacSoftwareRegistry', false ) )
 {
-	\add_action( 'admin_notices', function()
-		{
-			echo '<div class="notice notice-error is-dismissible">'.
-				 '<em>{eac}SoftwareRegistry Custom Hooks</em> '.
-				 'requires installation & activation of '.
-				 '<a href="https://swregistry.earthasylum.com/software-registration-server/" target="_blank">'.
-				 '{eac}SoftwareRegistry</a>.</div>';
-		}
-	);
-	return;
+	require_once 'dependency.php';
+	return dependency::notice([
+		'plugin'	=>	[ '{eac}SoftwareRegistry Custom Hooks' 	=> plugin_basename( __FILE__ ) ],
+		'requires'	=> 	[ '{eac}SoftwareRegistry' => 'eacSoftwareRegistry/eacSoftwareRegistry.php' ],
+		'manifest'	=> 'https://swregistry.earthasylum.com/software-updates/eacSoftwareRegistry.json',
+		'after'		=> '/wp-admin/edit.php?post_type=softwareregistry&page=eacsoftwareregistry-settings&tab=registration'
+	]);
 }
+
 
 class eacSoftwareRegistry_Custom_Hooks
 {

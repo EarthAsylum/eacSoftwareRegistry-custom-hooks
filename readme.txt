@@ -1,8 +1,8 @@
 === {eac}SoftwareRegistry Custom Hooks ===
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)
-Stable tag:         2.0.15
-Last Updated:       30-Aug-2026
+Stable tag:         2.0.16
+Last Updated:       22-Sep-2026
 Requires at least:  5.8
 Tested up to:       7.1
 Requires PHP:       8.1
@@ -247,6 +247,10 @@ You should receive a copy of the GNU General Public License along with this prog
 
 
 == Changelog ==
+
+= Version 2.0.16 – September 22, 2026 =
+
++	Implemented new `dependency.php` script for automation of dependency installation.
 
 = Version 2.0.15 – August 30, 2026 =
 
