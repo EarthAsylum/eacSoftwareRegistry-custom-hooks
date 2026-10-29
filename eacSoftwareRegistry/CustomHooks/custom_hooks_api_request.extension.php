@@ -9,8 +9,7 @@ namespace EarthAsylumConsulting\Extensions;
  * @category	WordPress Plugin
  * @package		{eac}SoftwareRegistry\Custom Hooks
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.earthasylum.com>
- * @version		2.x
+ * @copyright	Copyright (c) 2026 EarthAsylum Consulting <www.earthasylum.com>
  * @link		https://swregistry.earthasylum.com/
  */
 
@@ -23,7 +22,7 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 	/**
 	 * @var string extension version
 	 */
-	const VERSION		= '25.0331.1';
+	const VERSION		= '26.1026.1';
 
 	/**
 	 * @var string to set default tab name
@@ -199,6 +198,7 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 
 		try {
 			/* custom code here */
+			$this->plugin->logData($requestParams,'api_create_registration');
 			return $postValues;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $postValues;}
 	}
@@ -217,6 +217,7 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 
 		try {
 			/* custom code here */
+			$this->plugin->logData($requestParams,'api_activate_registration');
 			return $requestParams;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $requestParams;}
 	}
@@ -235,6 +236,7 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 
 		try {
 			/* custom code here */
+			$this->plugin->logData($requestParams,'api_revise_registration');
 			return $requestParams;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $requestParams;}
 	}
@@ -253,6 +255,7 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 
 		try {
 			/* custom code here */
+			$this->plugin->logData($requestParams,'api_renew_registration');
 			return $requestParams;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $requestParams;}
 	}
@@ -271,6 +274,7 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 
 		try {
 			/* custom code here */
+			$this->plugin->logData($requestParams,'api_deactivate_registration');
 			return $requestParams;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $requestParams;}
 	}
@@ -289,6 +293,7 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 
 		try {
 			/* custom code here */
+			$this->plugin->logData($requestParams,'api_verify_registration');
 			return $requestParams;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $requestParams;}
 	}
@@ -307,6 +312,7 @@ class custom_hooks_api_request extends \EarthAsylumConsulting\abstract_extension
 
 		try {
 			/* custom code here */
+			$this->plugin->logData($requestParams,'api_refresh_registration');
 			return $requestParams;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $requestParams;}
 	}

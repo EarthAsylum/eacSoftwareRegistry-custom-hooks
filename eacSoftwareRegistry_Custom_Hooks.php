@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:			{eac}SoftwareRegistry Custom Hooks
  * Description:			Software Registration Server Custom Hooks - allows coding hooks and customization of the Software Registration Server
- * Version:				2.0.16
+ * Version:				2.0.17
  * Requires at least:	5.8
  * Tested up to:		7.1
  * Requires PHP:		8.1
@@ -40,7 +40,7 @@ if (! class_exists( 'EarthAsylumConsulting\eacSoftwareRegistry', false ) )
 {
 	require_once 'dependency.php';
 	return dependency::notice([
-		'plugin'	=>	[ '{eac}SoftwareRegistry Custom Hooks' 	=> plugin_basename( __FILE__ ) ],
+		'plugin'	=>	[ '{eac}SoftwareRegistry Custom Hooks' => plugin_basename( __FILE__ ) ],
 		'requires'	=> 	[ '{eac}SoftwareRegistry' => 'eacSoftwareRegistry/eacSoftwareRegistry.php' ],
 		'manifest'	=> 'https://swregistry.earthasylum.com/software-updates/eacSoftwareRegistry.json',
 		'after'		=> '/wp-admin/edit.php?post_type=softwareregistry&page=eacsoftwareregistry-settings&tab=registration'
@@ -82,7 +82,7 @@ class eacSoftwareRegistry_Custom_Hooks
 								[
 									'settings'		=> eacSoftwareRegistry::getSettingsLink($pluginData,'hooks'),
 									'documentation'	=> eacSoftwareRegistry::getDocumentationLink($pluginData),
-									'support'		=> eacSoftwareRegistry::getSupportLink($pluginData),
+									'support'		=> eacSoftwareRegistry::getSupportLink($pluginData,plugin_basename( __FILE__ )),
 								],
 								$pluginLinks
 							);

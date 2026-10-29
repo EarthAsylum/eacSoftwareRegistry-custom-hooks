@@ -1,8 +1,8 @@
 === {eac}SoftwareRegistry Custom Hooks ===
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)
-Stable tag:         2.0.16
-Last Updated:       22-Sep-2026
+Stable tag:         2.0.17
+Last Updated:       26-Oct-2026
 Requires at least:  5.8
 Tested up to:       7.1
 Requires PHP:       8.1
@@ -247,6 +247,12 @@ You should receive a copy of the GNU General Public License along with this prog
 
 
 == Changelog ==
+
+= Version 2.0.17 – October 26, 2026 =
+
++	Compatible with PHP 8.4.
++	Fixed Implicitly marking parameter as nullable (?string).
++	Added `logDebug()` statements to API request/response hooks.
 
 = Version 2.0.16 – September 22, 2026 =
 

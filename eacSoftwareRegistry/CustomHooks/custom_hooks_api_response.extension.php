@@ -9,8 +9,7 @@ namespace EarthAsylumConsulting\Extensions;
  * @category	WordPress Plugin
  * @package		{eac}SoftwareRegistry\Custom Hooks
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.earthasylum.com>
- * @version		2.x
+ * @copyright	Copyright (c) 2026 EarthAsylum Consulting <www.earthasylum.com>
  * @link		https://swregistry.earthasylum.com/
  */
 
@@ -23,7 +22,7 @@ class custom_hooks_api_response extends \EarthAsylumConsulting\abstract_extensio
 	/**
 	 * @var string extension version
 	 */
-	const VERSION		= '25.0331.1';
+	const VERSION		= '26.1026.1';
 
 	/**
 	 * @var string to set default tab name
@@ -145,12 +144,13 @@ class custom_hooks_api_response extends \EarthAsylumConsulting\abstract_extensio
 	 * @param string $apiAction One of 'create', 'activate', 'revise', 'deactivate', 'verify' or 'update' (non-api)
 	 * @return array | WP_Error
 	 */
-	public function validate_registration(array $registration, object $wpPost=null, string $apiAction)
+	public function validate_registration(array $registration, object $wpPost, string $apiAction)
 	{
 		global $wp, $wpdb;
 
 		try {
 			/* custom code here */
+			$this->plugin->logData($registration,'validate_registration');
 			return $registration;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $registration;}
 	}
@@ -170,6 +170,7 @@ class custom_hooks_api_response extends \EarthAsylumConsulting\abstract_extensio
 
 		try {
 			/* custom code here */
+			$this->plugin->logData($registration,'is_valid_registration');
 			return $valid;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $valid;}
 	}
@@ -189,6 +190,7 @@ class custom_hooks_api_response extends \EarthAsylumConsulting\abstract_extensio
 
 		try {
 			/* custom code here */
+			$this->plugin->logData($postValues,'update_registration_post');
 			return $postValues;
 		} catch (\Throwable $e) {$this->plugin->logError($e);return $postValues;}
 	}
