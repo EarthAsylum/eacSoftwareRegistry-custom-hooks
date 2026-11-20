@@ -1,17 +1,17 @@
 === {eac}SoftwareRegistry Custom Hooks ===
 Plugin URI:         https://swregistry.earthasylum.com/software-registry-hooks/
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)
-Stable tag:         2.0.17
-Last Updated:       26-Oct-2026
-Requires at least:  5.8
+Stable tag:         2.0.18
+Last Updated:       19-Nov-2026
+Requires at least:  5.9
 Tested up to:       7.1
-Requires PHP:       8.1
+Requires PHP:       8.2
 Contributors:       EarthAsylum@github,KevinBurkholder@wordpress
 Donate link:        https://github.com/sponsors/EarthAsylum
 Support link:		https://github.com/EarthAsylum/eacSoftwaReregistry-custom-hooks/issues
 License:            GPLv3 or later
 License URI:        https://www.gnu.org/licenses/gpl.html
-Tags:               software registration, software registry, software license, license manager, registration hooks, {eac}SoftwareRegistry
+Tags:               software registration, software license, license manager, registration hooks, {eac}SoftwareRegistry
 GitHub URI:         https://github.com/EarthAsylum/eacSoftwaReregistry-custom-hooks
 
 {eac}SoftwareRegistry custom hooks - Add PHP code for the many hooks (filters and actions) available in the Software Registration Server.
@@ -247,6 +247,12 @@ You should receive a copy of the GNU General Public License along with this prog
 
 
 == Changelog ==
+
+= Version 2.0.18 – November 19, 2026 =
+
++	Addressed concerns generated from WordPress Plugin Checker.
++	Updated WordPress Requires at least to 5.9.
++	Updated Requires PHP to 8.2.
 
 = Version 2.0.17 – October 26, 2026 =
 

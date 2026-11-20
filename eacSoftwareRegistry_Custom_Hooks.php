@@ -1,4 +1,6 @@
 <?php
+namespace EarthAsylumConsulting;
+
 /**
  * EarthAsylum Consulting {eac} Software Registration Server
  *
@@ -15,18 +17,15 @@
  * @wordpress-plugin
  * Plugin Name:			{eac}SoftwareRegistry Custom Hooks
  * Description:			Software Registration Server Custom Hooks - allows coding hooks and customization of the Software Registration Server
- * Version:				2.0.17
- * Requires at least:	5.8
- * Tested up to:		7.1
- * Requires PHP:		8.1
+ * Version:				2.0.18
+ * Requires at least:	5.9
+ * Requires PHP:		8.2
  * Plugin URI:			https://swregistry.earthasylum.com/software-registry-hooks/
  * Update URI: 			https://swregistry.earthasylum.com/software-updates/eacsoftwareregistry-custom-hooks.json
  * Author:				EarthAsylum Consulting
  * Author URI:			http://www.earthasylum.com
  * License:				GPLv3 or later
  * License URI:			https://www.gnu.org/licenses/gpl.html
- * Text Domain:			eacSoftwareRegistry
- * Domain Path:			/languages
  */
 
 /**
@@ -34,7 +33,7 @@
  * Using this method prevents overwriting extensions when the plugin is updated or reinstalled.
  */
 
-namespace EarthAsylumConsulting;
+if (! defined( 'ABSPATH' )) exit;
 
 if (! class_exists( 'EarthAsylumConsulting\eacSoftwareRegistry', false ) )
 {

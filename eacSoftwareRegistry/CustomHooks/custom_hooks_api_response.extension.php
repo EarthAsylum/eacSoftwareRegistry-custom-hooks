@@ -17,12 +17,14 @@ namespace EarthAsylumConsulting\Extensions;
  * The only code changes needed are in the appropriate handler method(s), within the try...catch block.
  */
 
+if (! defined( 'ABSPATH' )) exit;
+
 class custom_hooks_api_response extends \EarthAsylumConsulting\abstract_extension
 {
 	/**
 	 * @var string extension version
 	 */
-	const VERSION		= '26.1026.1';
+	const VERSION		= '26.1119.1';
 
 	/**
 	 * @var string to set default tab name

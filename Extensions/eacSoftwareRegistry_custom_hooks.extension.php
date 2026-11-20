@@ -9,8 +9,7 @@ namespace EarthAsylumConsulting\Extensions;
  * @category	WordPress Plugin
  * @package		{eac}SoftwareRegistry\Custom Hooks
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.earthasylum.com>
- * @version		2.x
+ * @copyright	Copyright (c) 2026 EarthAsylum Consulting <www.earthasylum.com>
  * @link		https://swregistry.earthasylum.com/
  */
 
@@ -51,12 +50,14 @@ namespace EarthAsylumConsulting\Extensions;
  *		$postValues				Array of values passed to wp_insert_post(), including 'meta_input' array with above registry values
  */
 
+if (! defined( 'ABSPATH' )) exit;
+
 class eacSoftwareRegistry_custom_hooks extends \EarthAsylumConsulting\abstract_extension
 {
 	/**
 	 * @var string extension version
 	 */
-	const VERSION		= '25.0331.1';
+	const VERSION		= '26.1119.1';
 
 	/**
 	 * @var string to set default tab name
